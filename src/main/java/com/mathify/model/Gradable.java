@@ -8,8 +8,11 @@ package com.mathify.model;
  *
  * @author Akari
  */
-public class Gradable {
+public interface Gradable {
+
     float getScore();
-    
+
     boolean isPassed();
+
+    int getTotalQuestions();
 }
