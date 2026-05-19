@@ -1,4 +1,4 @@
-package com.mathify;
+package com.mathify.controller;
 
 import java.io.IOException;
 
