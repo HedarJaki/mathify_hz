@@ -13,28 +13,43 @@ public class LearningModule implements Playable {
     private String moduleId;
     private String moduleType;
     private int durationMinutes;
+    private String content;
 
     public LearningModule() {
     }
 
     public LearningModule(String moduleId,
                           String moduleType,
-                          int durationMinutes) {
+                          int durationMinutes,
+                          String content) {
 
         this.moduleId = moduleId;
         this.moduleType = moduleType;
         this.durationMinutes = durationMinutes;
+        this.content = content;
     }
 
     @Override
     public void start() {
 
-        System.out.println("Module dimulai...");
+        System.out.println("Module dimulai: " + moduleId);
+    }
+
+    @Override
+    public void pause() {
+
+        System.out.println("Module dijeda");
+    }
+
+    @Override
+    public void stop() {
+
+        System.out.println("Module dihentikan");
     }
 
     public String getContent() {
 
-        return "Isi materi learning module";
+        return content;
     }
 
     public String getModuleId() {
@@ -59,5 +74,9 @@ public class LearningModule implements Playable {
 
     public void setDurationMinutes(int durationMinutes) {
         this.durationMinutes = durationMinutes;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
