@@ -6,8 +6,13 @@ package com.mathify.model;
 
 /**
  *
- * @author ASUS
+ * @author Akari
  */
-public class Playable {
-    
+public interface Playable {
+
+    void start();
+
+    void pause();
+
+    void stop();
 }
