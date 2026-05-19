@@ -18,8 +18,8 @@ public class Lesson {
     private int xpReward;
 
     private List<Lesson> prerequisite;
-    private List<Playable> modules;
-    private List<Gradable> quizzes;
+    private List<LearningModule> modules;
+    private List<Quiz> quizzes;
 
     public Lesson() {
 
@@ -43,52 +43,34 @@ public class Lesson {
         quizzes = new ArrayList<>();
     }
 
-    public String getTitle() {
-        return title;
+    public void addModule(LearningModule module) {
+
+        modules.add(module);
     }
 
-    public String getDescription() {
-        return description;
+    public void addQuiz(Quiz quiz) {
+
+        quizzes.add(quiz);
     }
 
-    public int getXpReward() {
-        return xpReward;
+    public void addPrerequisite(Lesson lesson) {
+
+        prerequisite.add(lesson);
     }
 
-    public List<Lesson> getPrerequisite() {
-        return prerequisite;
+    public int getTotalModules() {
+
+        return modules.size();
     }
 
-    public List<Playable> getModules() {
-        return modules;
+    public int getTotalQuiz() {
+
+        return quizzes.size();
     }
 
-    public List<Gradable> getQuizzes() {
-        return quizzes;
-    }
+    public int calculateTotalXP() {
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setXpReward(int xpReward) {
-        this.xpReward = xpReward;
-    }
-
-    public void setPrerequisite(List<Lesson> prerequisite) {
-        this.prerequisite = prerequisite;
-    }
-
-    public void setModules(List<Playable> modules) {
-        this.modules = modules;
-    }
-
-    public void setQuizzes(List<Gradable> quizzes) {
-        this.quizzes = quizzes;
+        return xpReward + (modules.size() * 10);
     }
 
     public String getLessonId() {
@@ -97,5 +79,53 @@ public class Lesson {
 
     public void setLessonId(String lessonId) {
         this.lessonId = lessonId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getXpReward() {
+        return xpReward;
+    }
+
+    public void setXpReward(int xpReward) {
+        this.xpReward = xpReward;
+    }
+
+    public List<Lesson> getPrerequisite() {
+        return prerequisite;
+    }
+
+    public void setPrerequisite(List<Lesson> prerequisite) {
+        this.prerequisite = prerequisite;
+    }
+
+    public List<LearningModule> getModules() {
+        return modules;
+    }
+
+    public void setModules(List<LearningModule> modules) {
+        this.modules = modules;
+    }
+
+    public List<Quiz> getQuizzes() {
+        return quizzes;
+    }
+
+    public void setQuizzes(List<Quiz> quizzes) {
+        this.quizzes = quizzes;
     }
 }
