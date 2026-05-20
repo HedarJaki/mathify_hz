@@ -40,5 +40,4 @@ build/
 
 # Database Secrets
 db/password.txt
-
 .env*

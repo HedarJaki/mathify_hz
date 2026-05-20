@@ -8,11 +8,11 @@ package com.mathify.model;
  *
  * @author Akari
  */
-public interface Playable {
+public interface Gradable {
 
-    void start();
+    float getScore();
 
-    void pause();
+    boolean isPassed();
 
-    void stop();
+    int getTotalQuestions();
 }

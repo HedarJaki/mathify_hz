@@ -29,6 +29,4 @@ public abstract class Quiz implements Gradeable{
         // } 
         return true;
     }
-
-
 }
