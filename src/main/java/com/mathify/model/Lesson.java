@@ -12,6 +12,7 @@ import java.util.List;
  * @author Akari
  */
 public class Lesson {
+
     private String lessonId;
     private String title;
     private String description;
@@ -21,6 +22,9 @@ public class Lesson {
     private List<LearningModule> modules;
     private List<Quiz> quizzes;
 
+    private String content;
+    private int lessonNumber;
+
     public Lesson() {
 
         prerequisite = new ArrayList<>();
@@ -29,14 +33,33 @@ public class Lesson {
     }
 
     public Lesson(String lessonId,
-                  String title,
-                  String description,
-                  int xpReward) {
+            String title,
+            String description,
+            int xpReward) {
 
         this.lessonId = lessonId;
         this.title = title;
         this.description = description;
         this.xpReward = xpReward;
+
+        prerequisite = new ArrayList<>();
+        modules = new ArrayList<>();
+        quizzes = new ArrayList<>();
+    }
+
+    public Lesson(String lessonId,
+            String title,
+            String description,
+            String content,
+            int xpReward,
+            int lessonNumber) {
+
+        this.lessonId = lessonId;
+        this.title = title;
+        this.description = description;
+        this.content = content;
+        this.xpReward = xpReward;
+        this.lessonNumber = lessonNumber;
 
         prerequisite = new ArrayList<>();
         modules = new ArrayList<>();
@@ -127,5 +150,21 @@ public class Lesson {
 
     public void setQuizzes(List<Quiz> quizzes) {
         this.quizzes = quizzes;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public int getLessonNumber() {
+        return lessonNumber;
+    }
+
+    public void setLessonNumber(int lessonNumber) {
+        this.lessonNumber = lessonNumber;
     }
 }
