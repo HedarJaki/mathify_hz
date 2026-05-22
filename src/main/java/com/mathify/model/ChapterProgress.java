@@ -9,7 +9,7 @@ public record ChapterProgress(String chapterId, LocalDateTime completedAt, Durat
     public ChapterProgress addTimeSpent(Duration additional) {
         return new ChapterProgress(chapterId, completedAt, timeSpent.plus(additional));
     }
-    
+
     public ChapterProgress markAsCompleted(Duration finalTimeSpent) {
         if (isCompleted()) {
             throw new IllegalStateException("Chapter " + chapterId + " sudah selesai sebelumnya.");
