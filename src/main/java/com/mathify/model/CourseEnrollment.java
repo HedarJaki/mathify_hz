@@ -1,5 +1,6 @@
 package com.mathify.model;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 public record CourseEnrollment (String courseId, LocalDateTime enrolledAt, LocalDateTime completedAt){
     public boolean isCompleted(){
