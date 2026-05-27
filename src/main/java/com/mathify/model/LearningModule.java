@@ -8,7 +8,7 @@ package com.mathify.model;
  *
  * @author Akari
  */
-public class LearningModule implements Playable {
+public class LearningModule {
 
     private String moduleId;
     private enum Type{VIDEO, TEXT, INTERACTIVE, EXECISE};
@@ -21,19 +21,16 @@ public class LearningModule implements Playable {
         this.orderIndex = orderIndex;
     }
 
-    @Override
     public void start() {
 
         System.out.println("Module dimulai: " + moduleId);
     }
 
-    @Override
     public void pause() {
 
         System.out.println("Module dijeda");
     }
 
-    @Override
     public void stop() {
 
         System.out.println("Module dihentikan");
