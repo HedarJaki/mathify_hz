@@ -15,9 +15,6 @@ public class LearningModule implements Playable {
     private int durationMinutes;
     private int orderIndex;
 
-    @Override
-    public void start(){}
-
     public LearningModule(String id, int duration, int orderIndex){
         moduleId = id;
         durationMinutes = duration;
