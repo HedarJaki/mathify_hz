@@ -30,8 +30,6 @@ public abstract class Question {
 
         this.questionId = questionId;
         this.questionText = questionText;
-        this.options = options;
-        this.correctAnswer = correctAnswer;
         this.explanation = explanation;
         this.difficulty = difficulty;
     }

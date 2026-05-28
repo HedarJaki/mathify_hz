@@ -5,12 +5,11 @@ import java.util.ArrayList;
 public abstract class Quiz {
     private String quizId;
     private ArrayList<Question> question;
-    
+
     public Quiz(String id ,ArrayList<Question> arr ){
         this.quizId = id;
         this.question = arr;
     }
-
 
     public double getScore(ArrayList<Question> answer){
         return 1;
